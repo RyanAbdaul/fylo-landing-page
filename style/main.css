@@ -1,0 +1,531 @@
+/* Start Variables */
+:root {
+  /* Primary */
+--Very-Dark-Blue: hsl(243, 87%, 12%);
+--Desaturated-Blue: hsl(238, 22%, 44%);
+  /* Accent */
+--Bright-Blue: hsl(224, 93%, 58%);
+--Moderate-Cyan: hsl(170, 45%, 43%);
+  /* Neutral */
+--Light-Grayish-Blue: hsl(240, 75%, 98%);
+--Light-Gray: hsl(0, 0%, 75%);
+--section-padding-T: 80px;
+--section-padding-B: 80px;
+}
+/* End Variables */
+/* Start Global Rules */
+p {
+  font-size: 16px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+header nav {
+  font-family: 'Raleway', sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+:focus {
+  outline: none;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .container {
+ width: 355px
+}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+.container {
+ width: 750px;
+}
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+.container {
+ width: 970px;
+}
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+.container {
+ width: 1170px;
+}
+}
+/* End Global Rules */
+
+/* Start Header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+header .container img {
+  height: 40px;
+  width: 130px;
+}
+
+header .container ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+}
+@media (max-width: 576px) { 
+  header .container {
+    padding: 15px 0;
+  }
+  header .container img {
+    height: 30px;
+    width: 100px;
+  }
+}
+header .container ul a {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+header .container ul a:hover {
+  color: var(--Bright-Blue);
+}
+/* End Header */
+
+
+/* Start Content */
+section.main {
+  padding-top: var(--section-padding-T);
+  padding-bottom: var(--section-padding-B);
+}
+section.main .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+section.main .container img {
+  max-width: 600px;
+  animation: float 3s infinite linear alternate;
+  -webkit-animation: float 3s infinite linear alternate;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+section.main .container main .text h1 {
+  font-size: 34px;
+  line-height: 1.6;
+}
+section.main .container main .text p {
+  line-height: 1.6;
+  font-size: 19px;
+}
+section.main .container main form {
+  display: flex;
+  gap: 15px;
+}
+section.main .container main form input[type="email"] {
+  padding: 15px;
+  width: 280px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+section.main .container main form input[type="email"]:focus {
+  outline: none;
+}
+section.main .container main form input[type="submit"] {
+  width: 180px;
+  border: none;
+  background: var(--Bright-Blue);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+section.main .container main form input[type="submit"]:hover {
+  background-color: hsl(224, 91%, 61%);
+}
+@media (max-width: 1199px) {
+  section.main .container img {
+    max-width: 500px;
+  }
+  section.main .container main .text h1 {
+    font-size: 30px;
+  }
+  section.main .container main .text p {
+    font-size: 17px;
+  }
+  section.main .container main form input[type="email"] {
+    width: 250px;
+  }
+  section.main .container main form input[type="submit"] {
+    width: 150px;
+  }
+}
+@media (max-width: 991px) {
+  section.main .container img {
+    max-width: 400px;
+  }
+  section.main .container main .text h1 {
+    font-size: 26px;
+  }
+  section.main .container main .text p {
+    font-size: 14px;
+  }
+  section.main .container main form input[type="email"] {
+    width: 210px;
+  }
+  section.main .container main form input[type="submit"] {
+    width: 110px;
+  }
+}
+@media (max-width: 767px) {
+  section.main .container img {
+    max-width: 380px;
+  }
+  section.main .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center
+  }
+  section.main .container main form {
+    align-items: center;
+    flex-direction: column
+  }  
+  section.main .container main form {
+    width: 100%;
+  }
+  section.main .container main form input[type="submit"] {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+section.testimonials {
+  padding-top: var(--section-padding-T);
+  padding-bottom: var(--section-padding-B);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+section.testimonials::before {
+  content: '';
+  position: absolute;
+  background-color: var(--Light-Grayish-Blue);
+  width: 300%;
+  height: 200%;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%) skew(0, -10deg);
+  -webkit-transform: translateX(-50%) skew(0, -10deg);
+  -moz-transform: translateX(-50%) skew(0, -10deg);
+  -ms-transform: translateX(-50%) skew(0, -10deg);
+  -o-transform: translateX(-50%) skew(0, -10deg);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: waving 10s alternate infinite ease-in-out;
+  -webkit-animation: waving 10s alternate infinite ease-in-out;
+}
+section.testimonials .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+section.testimonials .container > img {
+  max-width: 600px;
+  animation: float 3s infinite alternate-reverse;
+  -webkit-animation: float 3s infinite alternate-reverse;
+}
+section.testimonials .container main .text p {
+  line-height: 1.6;
+}
+section.testimonials .container main .text a {
+  font-weight: bold;
+}
+section.testimonials .container main .text a:hover {
+  color: var(--Moderate-Cyan);
+}
+section.testimonials .container main .comment {
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 10px 1px #777;
+}
+section.testimonials .container main .comment p {
+  margin: 0 0 15px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+section.testimonials .container main .comment .info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+section.testimonials .container main .comment .info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+section.testimonials .container main .comment .info .name span:first-child {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+section.testimonials .container main .comment .info .name span:last-child {
+  font-size: 13px;
+}
+@media (max-width: 1199px) {
+  section.testimonials .container > img {
+    max-width: 500px;
+  }
+  section.testimonials .container main .text h1 {
+    font-size: 27px;
+  }
+  section.testimonials .container main .comment {
+    width: 300px;
+  }
+  section.testimonials .container main .comment p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  section.testimonials .container > img {
+    max-width: 350px;
+  }
+  section.testimonials .container main .text h1 {
+    font-size: 22px;
+  }
+  section.testimonials .container main .text p {
+    font-size: 15px;
+  }
+  section.testimonials .container main .text a {
+    font-size: 12px;
+  }
+  section.testimonials .container main .comment {
+    width: 250px;
+  }
+  section.testimonials .container main .comment p {
+    font-size: 13px;
+  }
+  section.testimonials .container main .comment img {
+    width: 40px;
+    height: 40px;
+  }
+  section.testimonials .container main .comment .info span:first-child {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.testimonials::before {
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+  }
+  section.testimonials .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  section.testimonials .container > img {
+    max-width: 380px;
+  }
+  section.testimonials .container main .comment {
+    width: 300px;
+    margin: 20px auto 0;
+  }
+}
+section.access {
+  padding-top: var(--section-padding-T);
+  padding-bottom: var(--section-padding-B);
+  background-color: var(--Desaturated-Blue);
+}
+section.access .container main {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+section.access .container main .text {
+  flex-basis: 50%;
+}
+section.access .container main .text h1 {
+  margin: 0 0 10px;
+}
+section.access .container main .text p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+section.access .container main form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 15px;
+}
+section.access .container main form input[type="email"] {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+section.access .container main form input[type="submit"] {
+  width: 200px;
+  padding: 15px 0;
+  background: var(--Bright-Blue);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
+section.access .container main form input[type="submit"]:hover {
+  background-color: hsl(224, 91%, 61%);
+}
+@media (max-width: 991px) {
+  section.access .container main form {
+    width: 300px;
+  }
+  section.access .container main form input[type="submit"] {
+    width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  section.access .container main {
+    flex-direction: column;
+    text-align: center;
+  }
+  section.access .container main form {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  section.access .container main form input[type="submit"] {
+    width: 100%;
+  }
+}
+/* End Content */
+
+
+/* Start Footer */
+footer {
+  padding-top: var(--section-padding-T);
+  padding-bottom: var(--section-padding-B);
+  background-color: var(--Very-Dark-Blue);
+  color: #fff;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+footer .container .contact > img {
+  margin-bottom: 20px;
+}
+footer .container .contact address .phone {
+  margin-bottom: 10px;
+}
+footer .container > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .container > ul a,
+footer .container .social a {
+  color: #fff;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  height: fit-content;
+}
+footer .container > ul a:hover,
+footer .container .social a:hover {
+  color: var(--Bright-Blue);  
+}
+footer .container .social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+footer .container .social a {
+  font-size: 30px;
+}
+.by {
+  margin: 40px 0 0;
+  text-align: center;
+  font-size: 18px;
+}
+.by a {
+  font-weight: bold;
+  color: var(--Bright-Blue);
+  cursor: pointer;
+}
+.by a:hover {
+  color: hsl(224, 91%, 61%);
+}
+/* End Footer*/
+
+/* Start Animation */
+@keyframes float {
+  0% {
+    transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+}
+  100% {
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+}
+@keyframes waving {
+  from {
+    transform: translateX(-50%) skew(0, -10deg);
+    -webkit-transform: translateX(-50%) skew(0, -10deg);
+    -moz-transform: translateX(-50%) skew(0, -10deg);
+    -ms-transform: translateX(-50%) skew(0, -10deg);
+    -o-transform: translateX(-50%) skew(0, -10deg);
+}
+  to {
+    transform: translateX(-30%) skew(10deg, 0);
+    -webkit-transform: translateX(-30%) skew(10deg, 0);
+    -moz-transform: translateX(-30%) skew(10deg, 0);
+    -ms-transform: translateX(-30%) skew(10deg, 0);
+    -o-transform: translateX(-30%) skew(10deg, 0);
+}
+}
+/* End Animation */
