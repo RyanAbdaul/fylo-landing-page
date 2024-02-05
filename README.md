@@ -33,6 +33,6 @@ ___
 ___
 ## Info About Me
 My name is **Ryan Abdaulaziz**, and as it's clear, I'm a frontend developer, and I hope that my work met the expectation that you had of me.  
-If you interested to see more you can see [my github account]()  
-Follow me [on instagram]() and trust me, never regretted.  
-Follow me on [frontend mentor]().  
+If you interested to see more you can see [my github account](https://github.com/RyanAbdaul)  
+Follow me [on instagram](https://www.instagram.com/ryan.abdaul/) and trust me, never regretted.  
+Follow me on [frontend mentor](https://www.frontendmentor.io/profile/RyanAbdaul).  
